@@ -19,7 +19,7 @@ const SingleMovie = () => {
     imdbRating: "",
     BoxOffice: "",
   });
-  const {id}  = useParams()
+  const { id } = useParams();
   useEffect(() => {
     fetch(`http://www.omdbapi.com/?i=${id}&apikey=29415120`)
       .then((r) => r.json())
@@ -31,11 +31,7 @@ const SingleMovie = () => {
   return (
     <>
       <div className={Styles.FullCard}>
-        <img
-          src={data.Poster}
-          alt="img"
-          style={{ borderRadius: "10%", width: "100%", maxWidth: "25rem" }}
-        />
+        <img src={data.Poster} alt="img" className={Styles.Poster} />
         <div className={Styles.data}>
           <Badge>Title :{data.Title}</Badge>
           <p>Year : {data.Year}</p>

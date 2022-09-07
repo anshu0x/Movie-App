@@ -11,7 +11,7 @@ const Movie = () => {
     <>
       <main className={Styles.main}>
         <div className={Styles.movieCard}>
-          {MovieList.map((m) => {
+          {MovieList.state.map((m) => {
             return (
               <Card key={m.imdbID} className="my-3" style={{ width: "14rem" }}>
                 <Card.Img

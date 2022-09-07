@@ -3,16 +3,16 @@ import React, { useEffect, useState } from "react";
 
 const MovieState = ({ children }) => {
   const [state, setstate] = useState([]);
+  const [movie,setMovieTitle] = useState('panda')
   useEffect(() => {
-    fetch("https://www.omdbapi.com/?&apikey=29415120&s=hacker")
+    fetch(`https://www.omdbapi.com/?&apikey=29415120&s=${movie}`)
       .then((r) => r.json())
       .then((rs) => {
-        console.log(rs.Search);
         setstate(rs.Search);
       });
-  }, []);
+  }, [movie]);
   return (
-    <MovieContext.Provider value={state}>{children}</MovieContext.Provider>
+    <MovieContext.Provider value={{state,setMovieTitle}}>{children}</MovieContext.Provider>
   );
 };
 

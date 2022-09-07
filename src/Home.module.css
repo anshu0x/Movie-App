@@ -15,12 +15,22 @@
   align-items: center;
   gap: 2rem;
 }
-
+.Poster{
+  border-radius: 10%;
+  width: 100%;
+  max-width: 25rem;
+  max-height: 30rem;
+}
 .badgesdiv {
   gap: 1rem;
   display: flex;
 }
 @media screen and (max-width: 600px) {
+  .Poster{
+    border-radius: 10%;
+    width: 100%;
+    max-width: 15rem;
+  }
   .movieCard {
     display: grid;
     grid-template-columns: 1fr;
