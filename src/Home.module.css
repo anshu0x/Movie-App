@@ -1,0 +1,49 @@
+.movieCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+.main {
+  width: 100%;
+  display: grid;
+  place-content: center;
+}
+.FullCard {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.badgesdiv {
+  gap: 1rem;
+  display: flex;
+}
+@media screen and (max-width: 600px) {
+  .movieCard {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .FullCard {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .badgesdiv{
+    flex-direction: column;
+    align-items: flex-start;
+
+  }
+  .data{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
