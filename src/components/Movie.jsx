@@ -38,9 +38,10 @@ const Movie = () => {
         >
           <Toast>
             <Toast.Header>
-              <strong className="me-auto">No Result Found</strong>
-              <a href="/">Go back</a>
+              <strong className="me-auto">No Result Found </strong>
+             <small>Please search something else</small>
             </Toast.Header>
+            <Toast.Body> <a href="/">Go back & search again !</a></Toast.Body>
           </Toast>
         </div>
       )}
