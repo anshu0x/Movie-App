@@ -11,7 +11,7 @@ function NavScrollExample() {
   const [movie, setmovie] = useState("");
 
   return (
-    <Navbar bg="dark" expand="lg">
+    <Navbar bg="dark" expand="lg" variant="dark">
       <Container fluid>
         <Navbar.Brand>
           <Link exact="true" to="/">
