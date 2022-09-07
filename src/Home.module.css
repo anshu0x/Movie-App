@@ -3,6 +3,13 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1rem;
 }
+.cardBody{
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
 .main {
   width: 100%;
   display: grid;
