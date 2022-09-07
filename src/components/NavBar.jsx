@@ -26,7 +26,7 @@ function NavScrollExample() {
             style={{ maxHeight: "100px" }}
             navbarScroll
           ></Nav>
-          <Form className="d-flex justify-content-center align-items-center">
+          <Form onSubmit={(e)=>e.preventDefault()} className="d-flex justify-content-center align-items-center">
             <input
               className="me-2"
               type="search"
@@ -44,7 +44,6 @@ function NavScrollExample() {
               }}
               disabled={movie.length < 3}
               onClick={() => setMovieTitle.setMovieTitle(movie)}
-              variant="outline-primary"
             >
               Search
             </button>
