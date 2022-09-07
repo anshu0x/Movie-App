@@ -26,7 +26,7 @@ function NavScrollExample() {
             style={{ maxHeight: "100px" }}
             navbarScroll
           ></Nav>
-          <Form className="d-flex">
+          <Form className="d-flex justify-content-center align-items-center">
             <input
               className="me-2"
               type="search"
@@ -36,12 +36,18 @@ function NavScrollExample() {
               value={movie}
               onChange={(e) => setmovie(e.target.value)}
             />
-            <Button
+            <button
+              style={{
+                border: "#0d6efd 1px solid",
+                background: "white",
+                color: "#0d6efd",
+              }}
+              disabled={movie.length < 3}
               onClick={() => setMovieTitle.setMovieTitle(movie)}
               variant="outline-primary"
             >
               Search
-            </Button>
+            </button>
           </Form>
         </Navbar.Collapse>
       </Container>

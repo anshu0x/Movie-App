@@ -13,7 +13,7 @@ const Movie = () => {
         <div className={Styles.movieCard}>
           {MovieList.state.map((m) => {
             return (
-              <Card key={m.imdbID} className="my-3" style={{ width: "14rem" }}>
+              <Card key={m.imdbID} className={`${Styles.SingleCard} my-3`} >
                 <Card.Img
                   variant="top"
                   src={m.Poster !== "N/A" ? m.Poster : notfound}
