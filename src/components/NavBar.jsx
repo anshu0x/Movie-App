@@ -2,7 +2,6 @@ import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 import { Badge, Nav } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useContext } from "react";
 import MovieContext from "../context/MovieContext";
@@ -12,11 +11,11 @@ function NavScrollExample() {
   const [movie, setmovie] = useState("");
 
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="dark" expand="lg">
       <Container fluid>
         <Navbar.Brand>
           <Link exact="true" to="/">
-            <Badge>
+            <Badge bg="dark">
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +27,8 @@ function NavScrollExample() {
                 >
                   <path d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0v6h8V1H4zm8 8H4v6h8V9zM1 1v2h2V1H1zm2 3H1v2h2V4zM1 7v2h2V7H1zm2 3H1v2h2v-2zm-2 3v2h2v-2H1zM15 1h-2v2h2V1zm-2 3v2h2V4h-2zm2 3h-2v2h2V7zm-2 3v2h2v-2h-2zm2 3h-2v2h2v-2z" />
                 </svg>
-              </span>              Movie Information App
+              </span>
+             <span> Movie Information App</span>
             </Badge>
           </Link>
         </Navbar.Brand>
@@ -48,15 +48,16 @@ function NavScrollExample() {
               type="search"
               placeholder="Search"
               aria-label="Search"
-              style={{ outline: "none" }}
+              style={{ outline: "none", border: "none" }}
               value={movie}
               onChange={(e) => setmovie(e.target.value)}
             />
             <button
               style={{
-                border: "#0d6efd 1px solid",
-                background: "white",
-                color: "#0d6efd",
+                border: "#fff 1px solid",
+                background: "black",
+                color: "white",
+                cursor: "pointer",
               }}
               disabled={movie.length < 3}
               onClick={() => setMovieTitle.setMovieTitle(movie)}
