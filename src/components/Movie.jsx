@@ -16,7 +16,7 @@ const Movie = () => {
             {MovieList.state.map((m) => {
               return (
                 <Link key={m.imdbID} to={`movie/${m.imdbID}`}>
-                  <Card  className={`${Styles.SingleCard} my-3`}>
+                  <Card className={`${Styles.SingleCard} my-3`}>
                     <Card.Img
                       variant="top"
                       src={m.Poster !== "N/A" ? m.Poster : notfound}
@@ -39,8 +39,7 @@ const Movie = () => {
           <Toast>
             <Toast.Header>
               <strong className="me-auto">No Result Found</strong>
-              <small>Pls Search Something else</small>
-              <Link to={'/'}>Go back</Link>
+              <a href="/">Go back</a>
             </Toast.Header>
           </Toast>
         </div>
