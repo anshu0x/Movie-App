@@ -58,7 +58,7 @@ const SingleMovie = () => {
             <p>Actors : {`${data.Actors.slice(0, 20)}...`}</p>
             <p>Language : {data.Language}</p>
             <div className={Styles.badgesdiv}>
-              <Badge>Awards : {data.Awards}</Badge>
+              <Badge>Awards : {data.Awards.slice(0, 30)}</Badge>
               <Badge>imdbRating : {data.imdbRating} </Badge>
               <Badge bg="secondary">
                 Country : {data.Country.slice(0, 30)}
